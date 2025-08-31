@@ -1,11 +1,9 @@
 //learn to eat, learn to speak, don't learn the habit of replacing cre 
 module.exports.config = {
-
 	name: "googlebar",
-
 	version: "1.0.0",
 	hasPermssion: 0,
-	credits: "𝐏𝐫𝐢𝐲𝐚𝐧𝐬𝐡 𝐑𝐚𝐣𝐩𝐮𝐭",
+	credits: "YUVi verma",
 	description: "Comment on table ( ͡° ͜ʖ ͡°)",
 	commandCategory: "edit-img",
 	usages: "google [text]",
@@ -16,7 +14,6 @@ module.exports.config = {
 		 "fs-extra":""
 	}
 };
-
 module.exports.wrapText = (ctx, text, maxWidth) => {
 	return new Promise(resolve => {
 		if (ctx.measureText(text).width < maxWidth) return resolve([text]);
@@ -45,7 +42,6 @@ module.exports.wrapText = (ctx, text, maxWidth) => {
 		return resolve(lines);
 	});
 } 
-
 module.exports.run = async function({ api, event, args }) {
 	let { senderID, threadID, messageID } = event;
 	const { loadImage, createCanvas } = require("canvas");
